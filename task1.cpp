@@ -18,8 +18,8 @@ void define(size_t left, size_t right) {
         res[i] = 0;
     }
 
-    for (int i = left * COUNT; i < right * COUNT; i++) { // Инициализируем матрицу M значениями 5.
-        M[i] = 5;
+    for (int i = left * COUNT; i < right * COUNT; i++) { // Инициализируем матрицу M значениями 2.
+        M[i] = 2;
     }
 }
 
