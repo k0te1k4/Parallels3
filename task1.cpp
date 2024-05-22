@@ -51,7 +51,9 @@ int main()
     M = new double[COUNT*COUNT];
 
     for (int j = 1; j <= 40; j++) { // создаем необходимое количество потоков для инициализации и умножения.
-        int countThreads = j, left, right, items_per_thread = COUNT / countThreads, items_per_thread_mod = COUNT % countThreads;
+        int countThreads = j, left, right 
+        int items_per_thread = COUNT / countThreads
+        int items_per_thread_mod = COUNT % countThreads;
 
         vector<thread> threads;
 
