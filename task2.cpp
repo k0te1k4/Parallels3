@@ -4,6 +4,7 @@
 #include <math.h>
 #include <queue>
 #include <unordered_map>
+#include <numbers>
 
 #define Type double
 
@@ -26,7 +27,7 @@ void server_thread(const stop_token& stoken)
 
     while (!stoken.stop_requested()) // Пока не запрошено завершение работы сервера, поток обрабатывает задачи.
     {
-        lock_res.lock(); 
+        lock_res.lock();
 
         if (tasks.empty()) { // Если очередь пуста, сервер ожидает сигнала от условной переменной condVar, чтобы продолжить выполнение.
             condVar.wait_for(lock_res, chrono::seconds(1s));
